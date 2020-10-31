@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n, A[100], i, k;
+    cin>>n>>k;
+    priority_queue<int, vector<int>, greater<int>> minh;
+    for(i = 0; i < n; i++)
+    {  cin>>A[i];
+    minh.push(A[i]);
+    if(minh.size() > k)
+    {  
+        cout<<minh.top();
+        minh.pop();
+    }
+    }
+    if(minh.size() > 0)
+    {
+    cout<<minh.top();
+    minh.pop();
+    }
+return 0;
+}
+    
